@@ -1,0 +1,38 @@
+{% extends "mail/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="test1 container-fluid">
+  <h1>Test one:</h1>
+  <button id="clicker"> Click that give your name</button>
+  <button id='paragr'>
+    click that create a new paragraph
+  </button>
+  <button id="newline">
+    create new line
+  </button>
+  <h1>УгадайКа!</h1>
+
+  <p>Мы загадали вам число от 1 до 100. <span id="trying"> </span>, чтобы удагать.
+    Мы будем вам давать подказки насколько вы близко к загадываемому числу.
+  </p>
+
+
+  <div class="form">
+    <label for="guessField">Enter a guess: </label>
+    <input type="text" id="guessfield">
+    <input type="submit" value="Submitguess" id="guessSubmit">
+    <i id="validInput"> </i>
+    <button type="sumbit" value="Reset game" class="display--none" id="clsResGam">Reset game
+    </button>
+  </div>
+
+  <div id="resultParas">
+    <p id="guesses"> </p>
+    <p id="lastResult"></p>
+    <p id="lowOrHi"></p>
+
+  </div>
+
+</div>
+{% endblock %}
